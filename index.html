@@ -3,59 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M-Art</title>
+  <title>M-Art — Regards sensibles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <p class="brand">M-Art</p>
-      <h1>Une sélection sensible d'oeuvres et de regards personnels</h1>
-      <p class="intro">
-        M-Art est un espace dédié aux oeuvres qui marquent, intriguent ou touchent.
-        Chaque publication présente une oeuvre choisie et un commentaire personnel qui en prolonge l'émotion.
-      </p>
 
-      <p style="margin-top: 24px;">
-        <a href="presentation.html" style="color: white; text-decoration: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 12px 18px; border-radius: 999px; display: inline-block;">
-          Découvrir la présentation
-        </a>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">M·Art</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Oeuvres</a>
+      <a href="presentation.html" class="nav-link">À propos</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-noise"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Portfolio artistique</span>
+      </div>
+      <h1 class="hero-title">
+        <em>Une sélection</em><br>
+        sensible d'œuvres
+      </h1>
+      <p class="hero-sub">
+        Chaque œuvre choisie pour ce qu'elle provoque — une émotion, une question, un silence.
       </p>
+      <a href="presentation.html" class="hero-cta">
+        <span>Découvrir</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section-title">
-      <p>Première oeuvre</p>
-      <h2>Oeuvre mise à l'honneur</h2>
-    </section>
+  <!-- SECTION LABEL -->
+  <section class="section-intro container">
+    <div class="section-label">
+      <span class="label-number">01</span>
+      <span class="label-text">Œuvre mise à l'honneur</span>
+    </div>
+    <h2 class="section-heading">Première œuvre</h2>
+  </section>
 
-    <article class="art-card">
-      <div class="art-image">
-        <img src="lady.png?v=2" alt="The Lady in White">
+  <!-- ART CARD -->
+  <main class="container">
+    <article class="art-card" id="artwork-1">
+      <div class="art-image-wrap">
+        <div class="art-image-inner">
+          <img src="lady.png" alt="The Lady in White">
+        </div>
+        <div class="art-image-caption">
+          <span>Huile sur toile</span>
+          <span class="caption-dot">·</span>
+          <span>XIXe siècle</span>
+        </div>
       </div>
 
-      <div class="art-text">
-        <span class="tag">Peinture</span>
-        <h3>The Lady in White</h3>
-        <p class="artist-line">Maquette de présentation</p>
+      <div class="art-content">
+        <div class="art-meta">
+          <span class="art-tag">Peinture</span>
+        </div>
 
-        <p>
-          Cette oeuvre dégage une impression de calme immédiat. La robe blanche capte la lumière avec une grande douceur,
-          tandis que l'arrière-plan plus sombre crée un contraste subtil et élégant.
-        </p>
+        <h3 class="art-title">The Lady<br><em>in White</em></h3>
+        <p class="art-artist">Maquette de présentation</p>
 
-        <p>
-          Ce qui attire ici, c'est la délicatesse générale de la composition. La posture, la matière du tissu et la lumière
-          donnent à l'ensemble une présence silencieuse, presque suspendue.
-        </p>
+        <div class="art-divider"></div>
 
-        <p>
-          J'aime particulièrement cette oeuvre pour son raffinement. Elle ne cherche pas à impressionner par l'excès,
-          mais par la nuance, la texture et une forme de beauté très paisible.
-        </p>
+        <div class="art-body">
+          <p>
+            Cette œuvre dégage une impression de calme immédiat. La robe blanche capte la lumière avec une grande douceur,
+            tandis que l'arrière-plan plus sombre crée un contraste subtil et élégant.
+          </p>
+          <p>
+            Ce qui attire ici, c'est la délicatesse générale de la composition. La posture, la matière du tissu et la lumière
+            donnent à l'ensemble une présence silencieuse, presque suspendue.
+          </p>
+          <p>
+            J'aime particulièrement cette œuvre pour son raffinement. Elle ne cherche pas à impressionner par l'excès,
+            mais par la nuance, la texture et une forme de beauté très paisible.
+          </p>
+        </div>
+
+        <div class="art-footer">
+          <div class="art-number">N° 001</div>
+        </div>
       </div>
     </article>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <p class="footer-brand">M·Art</p>
+      <p class="footer-copy">Un regard personnel sur l'art qui marque.</p>
+      <a href="presentation.html" class="footer-link">À propos →</a>
+    </div>
+  </footer>
+
 </body>
 </html>
