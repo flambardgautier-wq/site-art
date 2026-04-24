@@ -3,51 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Présentation - M-Art</title>
+  <title>À propos — M-Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="page-header">
-    <div class="page-header-content">
-      <p class="brand">M-Art</p>
-      <h1>Présentation</h1>
-      <p class="intro-page">
-        Un regard personnel sur des oeuvres qui ont marqué l'histoire de l'art.
-      </p>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">M·Art</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Oeuvres</a>
+      <a href="presentation.html" class="nav-link active">À propos</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-noise"></div>
+    <div class="page-hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">À propos</span>
+      </div>
+      <h1 class="page-hero-title">
+        Un regard<br>
+        <em>personnel</em>
+      </h1>
     </div>
   </header>
 
+  <!-- ABOUT SECTION -->
   <main class="container">
-    <section class="intro-card">
-      <div class="intro-image">
-        <img src="Photo.Intro.jpeg" alt="Photo de présentation">
+    <section class="about-card">
+      <div class="about-image-wrap">
+        <div class="about-image-inner">
+          <img src="Photo.Intro.jpeg" alt="Photo de présentation">
+        </div>
+        <div class="about-image-deco"></div>
       </div>
 
-      <div class="intro-text">
-        <span class="tag">À propos</span>
-        <h2>Bienvenue sur M-Art</h2>
+      <div class="about-content">
+        <span class="art-tag">La créatrice</span>
+        <h2 class="about-title">Bienvenue<br>sur <em>M-Art</em></h2>
 
-        <p>
-          Je suis étudiante et passionnée d'art. À travers M-Art, j'ai voulu créer un espace personnel
-          consacré aux oeuvres qui me touchent, me questionnent et, selon moi, ont laissé une empreinte
-          durable dans l'histoire de l'art.
-        </p>
+        <div class="art-divider"></div>
 
-        <p>
-          Ce portfolio rassemble des oeuvres que j'aime pour leur force visuelle, leur sens, mais aussi
-          pour l'impact culturel qu'elles ont pu avoir à leur époque et au-delà. Mon regard s'oriente
-          particulièrement vers les artistes femmes, qui ont su s'imposer dans un monde de l'art longtemps
-          dominé par les hommes, souvent avec talent, audace et singularité.
-        </p>
+        <div class="about-body">
+          <p>
+            Je suis étudiante et passionnée d'art. À travers M-Art, j'ai voulu créer un espace personnel
+            consacré aux œuvres qui me touchent, me questionnent et, selon moi, ont laissé une empreinte
+            durable dans l'histoire de l'art.
+          </p>
+          <p>
+            Ce portfolio rassemble des œuvres que j'aime pour leur force visuelle, leur sens, mais aussi
+            pour l'impact culturel qu'elles ont pu avoir à leur époque et au-delà.
+          </p>
+          <p>
+            Mon regard s'oriente particulièrement vers les <strong>artistes femmes</strong>, qui ont su s'imposer 
+            dans un monde de l'art longtemps dominé par les hommes — souvent avec talent, audace et singularité.
+          </p>
+          <p>
+            Avec M-Art, je souhaite partager une sélection d'œuvres accompagnées de commentaires personnels,
+            afin de proposer une approche sensible, accessible et engagée de l'art.
+          </p>
+        </div>
 
-        <p>
-          Avec M-Art, je souhaite partager une sélection d'oeuvres accompagnées de commentaires personnels,
-          afin de proposer une approche sensible, accessible et engagée de l'art.
-        </p>
-
-        <a class="back-link" href="index.html">Voir les oeuvres</a>
+        <a href="index.html" class="hero-cta">
+          <span>Voir les œuvres</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </section>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <p class="footer-brand">M·Art</p>
+      <p class="footer-copy">Un regard personnel sur l'art qui marque.</p>
+      <a href="index.html" class="footer-link">Voir les œuvres →</a>
+    </div>
+  </footer>
+
 </body>
 </html>
