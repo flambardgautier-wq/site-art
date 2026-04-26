@@ -103,7 +103,7 @@ a, button { cursor: pointer; }
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(220,200,165,0.82);
   transition: color 0.35s ease;
 }
 .nav.scrolled .nav-counter { color: var(--taupe); }
@@ -242,16 +242,17 @@ a, button { cursor: pointer; }
 }
 .about-content .hero-cta:hover { background: rgba(156,122,74,0.16); }
 
-/* === HERO SCROLL — FIXED, positionné à droite === */
+/* === HERO SCROLL — centré en bas === */
 .hero-scroll {
   position: absolute;
-  right: 48px;            /* côté droit, loin du bouton centré */
-  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  color: rgba(196,160,106,0.55);
+  color: rgba(220,190,140,0.75);
   font-size: 9px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -261,11 +262,11 @@ a, button { cursor: pointer; }
 .scroll-line {
   width: 1px;
   height: 50px;
-  background: linear-gradient(to bottom, rgba(196,160,106,0.55), transparent);
+  background: linear-gradient(to bottom, rgba(220,190,140,0.75), transparent);
   animation: scrollPulse 2.5s ease-in-out infinite;
 }
 @keyframes scrollPulse {
-  0%,100% { transform: scaleY(1); opacity: 0.55; }
+  0%,100% { transform: scaleY(1); opacity: 0.75; }
   50%      { transform: scaleY(1.15); opacity: 1; }
 }
 
@@ -645,7 +646,7 @@ a, button { cursor: pointer; }
 .site-footer { background: var(--charcoal); padding: 56px 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; }
 .footer-brand { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--ivory); }
-.footer-copy { font-size: 13px; font-weight: 300; color: var(--taupe); }
+.footer-copy { font-size: 13px; font-weight: 300; color: #a89e92; }
 .footer-link { font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-light); text-decoration: none; transition: color 0.3s; }
 .footer-link:hover { color: var(--ivory); }
 
