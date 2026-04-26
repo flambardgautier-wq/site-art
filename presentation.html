@@ -11,20 +11,29 @@
 </head>
 <body>
 
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- PAGE TRANSITION -->
+  <div class="page-transition" id="pageTransition"></div>
+
   <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="index.html" class="nav-brand">M·Art</a>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-brand page-link">M·Art</a>
+    <div class="nav-center">
+      <span class="nav-counter">3 œuvres · En cours</span>
+    </div>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Oeuvres</a>
+      <a href="index.html" class="nav-link page-link">Œuvres</a>
       <a href="presentation.html" class="nav-link active">À propos</a>
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
+  <!-- PAGE HERO -->
   <header class="page-hero">
     <div class="hero-bg"></div>
     <div class="hero-noise"></div>
-    <div class="page-hero-content">
+    <div class="page-hero-content container">
       <div class="hero-eyebrow">
         <span class="eyebrow-line"></span>
         <span class="eyebrow-text">À propos</span>
@@ -36,9 +45,18 @@
     </div>
   </header>
 
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="quote-inner container">
+      <span class="quote-mark">"</span>
+      <blockquote>La peinture est une poésie muette, et la poésie est une peinture aveugle.</blockquote>
+      <cite>— Léonard de Vinci</cite>
+    </div>
+  </section>
+
   <!-- ABOUT SECTION -->
   <main class="container">
-    <section class="about-card">
+    <section class="about-card reveal">
       <div class="about-image-wrap">
         <div class="about-image-inner">
           <img src="Photo.Intro.jpeg" alt="Photo de présentation">
@@ -72,10 +90,31 @@
           </p>
         </div>
 
-        <a href="index.html" class="hero-cta">
+        <a href="index.html" class="hero-cta page-link" style="margin-top: 8px;">
           <span>Voir les œuvres</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section reveal">
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-number">01</span>
+          <h4>Sensibilité</h4>
+          <p>Chaque œuvre est choisie pour l'émotion qu'elle provoque avant tout autre considération.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-number">02</span>
+          <h4>Engagement</h4>
+          <p>Une attention particulière aux femmes artistes et à leur place dans l'histoire de l'art.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-number">03</span>
+          <h4>Accessibilité</h4>
+          <p>Un langage sincère et direct, sans jargon, pour que l'art appartienne à tous.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -85,9 +124,43 @@
     <div class="footer-inner container">
       <p class="footer-brand">M·Art</p>
       <p class="footer-copy">Un regard personnel sur l'art qui marque.</p>
-      <a href="index.html" class="footer-link">Voir les œuvres →</a>
+      <a href="index.html" class="footer-link page-link">Voir les œuvres →</a>
     </div>
   </footer>
 
+  <script>
+    // === PROGRESS BAR ===
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+
+    // === REVEAL ===
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // === PAGE TRANSITIONS ===
+    const overlay = document.getElementById('pageTransition');
+    document.querySelectorAll('a.page-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#')) return;
+        e.preventDefault();
+        overlay.classList.add('active');
+        setTimeout(() => { window.location.href = href; }, 380);
+      });
+    });
+    window.addEventListener('pageshow', () => overlay.classList.remove('active'));
+
+    // === NAV SCROLL ===
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
 </body>
 </html>
